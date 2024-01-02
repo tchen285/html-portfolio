@@ -14,9 +14,9 @@
 </head>
 
 <body>
-    <div class="container mt-4 mb-4"> <!-- 添加 mt-4（上边距为4单位）和 mb-4（下边距为4单位） -->
-        <div class="row align-items-center">
-            <div class="col-auto mb-3"> <!-- 添加 mb-3（底边距为3单位）-->
+    <div class="container mt-4 mb-4">
+        <nav class="d-flex justify-content-between mb-3">
+            <div class="col-auto">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
                     class="bi bi-app-indicator" viewBox="0 0 16 16">
                     <path
@@ -25,21 +25,23 @@
                 </svg>
                 <span class="fs-5 ms-2 fw-bold">My Projects</span>
             </div>
+            <button class="btn btn-primary" onclick="goBack()">Home</button>
+        </nav>
     
         <!-- This line is key to implement bootstrap components -->
     
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
                 <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
-                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Project 1</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
-                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Project 2</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane"
-                    type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+                    type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Project 3</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane"
@@ -49,8 +51,26 @@
         </ul>
     
         <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
-                tabindex="0">Content for Home tab...</div>
+            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h5 style="padding-top: 30px; padding-bottom: 15px;">Ship Management System</h5>
+                        <img src="../images/ship_layout_image1.png" class="img-fluid" alt="Project Image">
+                    </div>
+                    <div class="col-md-4">
+                        <p style="padding-top: 88px;"><a class="icon-link icon-link-hover" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" href="https://github.com/tchen285/FutureTech.git" target="_blank">
+                          <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"></use></svg>
+                          Project Github Link
+                        </a></p>
+                        <p><a class="icon-link icon-link-hover" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" href="https://www.youtube.com/watch?v=ANHogMohPbo" target="_blank">
+                          <svg class="bi" aria-hidden="true"><use xlink:href="#clipboard"></use></svg>
+                          Project Video Demo Link
+                        </a></p>
+                    </div>
+                </div>
+            </div>
+            
+            
             <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab"
                 tabindex="0">Content for Profile tab...</div>
             <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab"
@@ -60,11 +80,15 @@
         </div>
     
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    </body>
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+
+        <script>
+            function goBack() {
+                window.history.back();
+            }
+        </script>
     </div>
 </body>
-
-    
 
 </html>
