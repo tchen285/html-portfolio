@@ -10,6 +10,23 @@
         crossorigin="anonymous">
     <style>
         /* Add your custom styles here if needed */
+        /* .container {
+            max-width: 50%; 
+        } */
+
+        .content {
+            /* float: left; 左浮动，使文本内容在左侧 */
+            width: 50%; /* 设置文本内容宽度为50% */
+            padding-right: 20px; /* 右侧留出一些空白 */
+        }
+
+        .image {
+            float: right; /* 右浮动，使图片在右侧 */
+        }
+
+        .clear {
+            clear: both; /* 清除浮动 */
+        }
     </style>
 </head>
 
@@ -54,8 +71,8 @@
             <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
                 <div class="row">
                     <div class="col-md-8">
-                        <h5 style="padding-top: 30px; padding-bottom: 15px;">Ship Management System</h5>
-                        <img src="../images/ship_layout_image1.png" class="img-fluid" alt="Project Image">
+                        <h5 style="text-align: center; padding-top: 30px; padding-bottom: 15px;">Ship Management System</h5>
+                        <img style="padding-bottom: 30px;" src="../images/ship_layout_image1.png" class="img-fluid" alt="Project Image">
                     </div>
                     <div class="col-md-4">
                         <p style="padding-top: 88px;"><a class="icon-link icon-link-hover" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" href="https://github.com/tchen285/FutureTech.git" target="_blank">
@@ -67,25 +84,85 @@
                           Project Video Demo Link
                         </a></p>
                     </div>
-                    <div>
-                        <p style="padding-top: 20px">
-                            The software's purpose is to identify the most efficient solution (minimizing time consumption) for loading/unloading operations and optimizing the balance of a ship at Keoghs Port. Keoghs Port is a company that generates revenue through ship loading, unloading, and balancing.
-                        </p>
-                        <img src="../images/ship_port.jpg" class="img-fluid" alt="Project Image">
-                        <p style="padding-top: 20px">
-                            When a ship arrives at the port, the operator—Keoghs Port staff stationed in a tower that moves along with the crane—receives a manifest from the captain. This manifest is a text file containing information about the containers, including their coordinates, weight, and descriptions (e.g., Walmart Ohio Cat toys).
-                        </p>
-                        <img src="../images/manifest.png" class="img-fluid" alt="Project Image">
-                        <p style="padding-top: 5px; padding-left: 200px"><em>A manifest sample</em></p>
-                        <p style="padding-top: 20px">
-                            At this moment, the operator already has a list of containers that need to be unloaded and containers on trucks waiting to be loaded.
-                        </p>
-                        <img src="../images/holding_trucks.png" class="img-fluid" alt="Project Image">
-                        <p style="padding-top: 20px">
-                            Before the introduction of this software, operators relied on pen and paper to calculate what they believed to be the best solution based on their past experience. This manual process was time-consuming and couldn't guarantee the attainment of the optimal solution.
-                        </p>
-                        <img src="../images/worker_calculating.jpeg" class="img-fluid" alt="Project Image">
-                    </div>
+                    <!-- Accordion Starting point -->
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                              Motivation for making this software
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                              <!-- Put the Motivation for the software right here -->
+                              <div>
+                                <p style="padding-top: 10px">
+                                    <strong>The software's purpose</strong> is to identify the most efficient solution (minimizing time consumption) for loading/unloading operations and optimizing the balance of a ship at Keoghs Port. Keoghs Port is a company that generates revenue through <code>ship loading, unloading, and balancing</code>.
+                                </p>
+                                <img src="../images/ship_port.jpg" class="img-fluid" alt="Project Image">
+                                <p style="padding-top: 20px">
+                                    When a ship arrives at the port, the operator—Keoghs Port staff stationed in a tower that moves along with the crane—receives a <code>manifest</code> from the captain. This manifest is a text file containing information about the containers, including their coordinates, weight, and descriptions (e.g., Walmart Ohio Cat toys).
+                                </p>
+                                <img src="../images/manifest.png" class="img-fluid" alt="Project Image">
+                                <p style="padding-top: 5px; padding-left: 200px"><em>A manifest sample</em></p>
+                                <p style="padding-top: 20px">
+                                    <strong>The cost comes from the movement of crane. </strong>Regardless of whether the crane grabs a container or not, there will be a cost as long as the crane is moved.
+                                </p>
+                                <div class="image">
+                                    <img width="300px" src="../images/movement_cost.png" alt="Movement Cost">
+                                </div>
+                                <div class="content">
+                                    <ul style="width: 100%; padding-right: 20px; padding-top: 20px; font-size: 14px;">
+                                        <li>The cost for any transfer between a truck and ship or buffer is 2 minutes.</li>
+                                        <li>The cost for any transfer between the buffer and ship is 4 minutes(between the 2 pink cells).</li>
+                                        <li>The cost for any transfer in ship or buffer is 1 minute / cell.</li>
+                                    </ul>
+                                </div>
+                                <div class="clear"></div>
+                                
+                                <p style="padding-top: 20px">
+                                    <strong>If the current task is to loading/unloading a ship. </strong>At this moment, the operator already has a list of containers that need to be unloaded and containers on trucks waiting to be loaded.
+                                </p>
+                                <img src="../images/holding_trucks.png" class="img-fluid" alt="Project Image">
+                                <p style="padding-top: 20px">
+                                    <strong>If the current task is to balancing a ship, </strong>then there is no need to consider loading/unloading process. All the work is to move the containers on the ship so that the weight difference between the left half of the ship and the right half of the ship is within 10%.
+                                </p>
+                                <p style="padding-top: 20px">
+                                    <strong>Before the introduction of this software,</strong> operators relied on pen and paper to calculate what they believed to be the best solution based on their past experience. This manual process was time-consuming and couldn't guarantee the attainment of the optimal solution.
+                                </p>
+                                <img src="../images/worker_calculating.jpeg" class="img-fluid" alt="Project Image">
+                            </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                              Algrithms of loading/unloading and balancing a ship
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                              Accordion Item #3
+                            </button>
+                          </h2>
+                          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <!-- Accordion Ending point -->
+
+                    
                 </div>
             </div>
             
