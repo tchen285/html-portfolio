@@ -72,7 +72,7 @@
       <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
         <div class="row">
           <div class="col-md-8">
-            <h5 style="text-align: center; padding-top: 30px; padding-bottom: 15px;">Ship Management System</h5>
+            <h5 style="text-align: center; padding-top: 30px; padding-bottom: 15px; color:brown">Ship Management System</h5>
             <img style="padding-bottom: 30px;" src="../images/ship_layout_image1.png" class="img-fluid"
               alt="Project Image">
           </div>
@@ -287,7 +287,7 @@
                     the ship to continue.</p>
                   <img style="max-width: 100%; max-height: 100%; padding-top: 20px; padding-bottom: 20px;"
                     src="../images/software_images/software4.png" alt="Software Image 4">
-                  <strong>Let's assume Andy clicks loading/unloading: </strong>
+                  <p><strong>Let's assume Andy clicks loading/unloading: </strong></p>
                   <p>Now, Andy can choose which containers on the ship he needs to unload, and he can also add loading
                     containers he needs to loading on the ship.</p>
                   <img style="max-width: 100%; max-height: 100%; padding-top: 20px; padding-bottom: 20px;"
@@ -380,7 +380,7 @@
       <!-- project2 starts here -->
       <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
         <div class="col-md-8">
-          <h5 style="text-align: center; padding-top: 30px; padding-bottom: 15px;">Restaurant Online Ordering Website
+          <h5 style="text-align: center; padding-top: 30px; padding-bottom: 15px; color:brown">Restaurant Online Ordering Website
           </h5>
           <img style="padding-bottom: 30px;" src="../project2_images/walk_through/order_page.png" class="img-fluid"
             alt="Project Image">
@@ -563,7 +563,7 @@
       <!-- Project 3 starts here -->
       <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
         <div class="col-md-8">
-          <h5 style="text-align: center; padding-top: 30px; padding-bottom: 15px;">Solving N-Puzzle Problems
+          <h5 style="text-align: center; padding-top: 30px; padding-bottom: 15px; color:brown">Solving N-Puzzle Problems
           </h5>
           <img style="padding-bottom: 15px;" src="../project3_images/8puzzle.png" class="img-fluid"
             alt="Project Image">
@@ -657,9 +657,104 @@
       <!-- Project 3 ends here -->
 
 
+      <!-- Project 4 starts here -->
       <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
-        Content for Disabled tab...
+        <div class="col-md-8">
+          <h5 style="text-align: center; padding-top: 30px; padding-bottom: 15px; color:brown">Machine Learning Projects
+          </h5>
+          <img style="padding-bottom: 15px;" src="../project4_images/machine_learning1.png" class="img-fluid"
+            alt="Project Image">
+        </div>
+        <div class="col-md-4">
+          <p style="padding-top: 15px;"><a class="icon-link icon-link-hover"
+              style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);"
+              href="https://github.com/tchen285/Machine-Learning-Projects.git" target="_blank">
+              <svg class="bi" aria-hidden="true">
+                <use xlink:href="#clipboard"></use>
+              </svg>
+              Project Github Link
+            </a></p>
+        </div>
+        <p style="max-width: 80% "><strong>This is my favorite of all my projects. I think it's really cool. It gives me a 
+          <code>Basic Idea</code> that instead of trying to create a very complex program to do X, use a relatively simple program that can learn to do X.</strong></p>
+          <p style="max-width: 80% ">For example, instead of trying to program a car to drive <code>(if light(red) && Not pedestrain || speed(x) <= 12 && ...)</code>, 
+            create a program that watches human drive, and <em>learns</em> how to drive.</p>
+          <p style="color:brown">In this project, the programming language I used is 100% Java.</p>
+        <img style="max-width: 30%; max-height: 30%; padding-top: 0px; padding-bottom: 30px;"
+                    src="../project3_images/java.png">
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseOne">
+                Machine Learning Project Part 1
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <!-- Put technology stack rationale right here -->
+                <div>
+                  <p style="padding-top: 10px">
+                    The <strong>Uniform Cost Search</strong> is a blind search in N-puzzle problems.
+                  </p>
+                  <img style="max-width: 30%; max-height: 30%; padding-top: 20px; padding-bottom: 20px;"
+                    src="../project3_images/UNIFORM.png">
+                  <p>The <strong>3-puzzle</strong> is small enough that we can show a full search tree.</p>
+                  <p style="color: gray;">Repeated states are shown in gray.</p>
+                  <img style="max-width: 70%; max-height: 70%; padding-top: 20px; padding-bottom: 20px;"
+                    src="../project3_images/3_puzzle.png">
+                  <p>After level-6, there is no unvisited nodes in this tree.</p>
+                  <p>However, for 3-puzzle problems, there is no problem using uniform cost search, but for 8-puzzle and higher level searches, a very large spanning tree will be formed and extremely high time complexity will be formed.</p>
+                  <p>Note that in the search tree, we can acturally <code>trim</code> a branch to get the goal state.
+                     This leads to the introduction of <strong>Heuristic Search</strong>.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseTwo">
+                Machine Learning Project Part 2
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+              <div class="accordion-body">
+                <!-- Put technology stack rationale right here -->
+                <div>
+                  <p><strong>Heuristic Search</strong> is a Informed Search.</p>
+                  <p>A Heuristic is a function that, when applied to a state, returns a number that is an estimate of the merit of the state, with respect to the goal.</p>
+                  <p>In other words, the heuristic tells us approximately how far the state is from the <code>goal state</code>.</p>
+                  <img style="max-width: 30%; max-height: 50%; padding-top: 20px; padding-bottom: 20px;"
+                    src="../project3_images/goal_state.png">
+                  <p>In this case, only <strong>'8'</strong> is misplaced, so the heuristic function evaluates to 1.</p>
+                  <p style="color:chocolate">In other words, the heuristic is telling us, that it thinks a solution might be available in just 1 more move.</p>
+                  <img style="max-width: 70%; max-height: 50%; padding-top: 20px; padding-bottom: 20px;"
+                    src="../project3_images/manhattan.png">
+                  <p style="color:chocolate">Through Heuristic Search, we can effectively prune the Blind Search Tree.</p>
+                  <img style="max-width: 70%; max-height: 50%; padding-top: 20px; padding-bottom: 20px;"
+                    src="../project3_images/jian.png">
+                  <ul>
+                    <li><strong>My Code of Finding h(n)</strong></li>
+                    <img style="max-width: 60%; max-height: 50%; padding-top: 20px; padding-bottom: 20px;"
+                    src="../project3_images/code.png">
+                    <li><strong>A Sample Console Output</strong></li>
+                    <img style="max-width: 60%; max-height: 50%; padding-top: 20px; padding-bottom: 20px;"
+                    src="../project3_images/output.png">
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <!-- project4 ends here -->
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
