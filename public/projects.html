@@ -698,10 +698,10 @@
         <img style="max-width: 30%; max-height: 30%; padding-top: 0px; padding-bottom: 30px;"
           src="../project3_images/java.png">
         <p style="max-width: 80% ">This project has three parts: </p>
-        <ul>
+        <ul style="color:rgb(72, 125, 126)">
           <li><i>Random Accuracy Feature Selection</i></li>
           <li><i>Nearest Neighbor Classifier</i></li>
-          <li><i>The Combination of the previous 2 parts</i></li>
+          <li><i>The Combination of the previous two parts</i></li>
         </ul>
         <p>The details are as follows:</p>
 
@@ -719,12 +719,52 @@
                 <!-- Put technology stack rationale right here -->
                 <div>
                   <ul>
-                    <li><strong>The Classification Problems</strong></li>
+                    <li><strong>Finding Selection Features</strong></li>
                     <p>If we want to write a machine learning code to let the computer distinguish <span
                         style="color: green;"><strong>Canadian</strong></span> quarters from <span
                         style="color: blue;"><strong>American</strong></span> quarters.</p>
                     <img style="max-width: 60%; max-height: 50%; padding-top: 15px; padding-bottom: 30px;"
                       src="../project4_images/CorA.png">
+                    <p>Our first reaction is probably to compare their <code>size differences</code>.</p>
+                    <img style="max-width: 40%; max-height: 30%; padding-top: 15px; padding-bottom: 30px;"
+                      src="../project4_images/diameter.png">
+                    <p>So we first measured their <code>diameters</code>.</p>
+                    <p>In the best case, we would find <code>a single feature</code> that would strongly separate te
+                      coins.</p>
+                    <img style="max-width: 70%; max-height: 30%; padding-top: 15px; padding-bottom: 30px;"
+                      src="../project4_images/diameter_compare.png">
+                    <p>After we measure some data, we plan to put the data in a chart for comparison.</p>
+                    <img style="max-width: 30%; max-height: 30%; padding-top: 15px; padding-bottom: 30px;"
+                      src="../project4_images/diameter_merge.png">
+                    <p>Here we have <code>99%</code> <span style="color:blue">blue</span> on the right side, but the
+                      left side is about
+                      <code>50/50</code> <span style="color:green">green</span>/<span style="color:blue">blue</span>.
+                    </p>
+                    <p style="max-width: 80%;">The tree below is a <code>Feature Selection Tree</code>,
+                      which means that the algorithm goes from not selecting a feature to selecting feature 1
+                      (<i>diameter</i>).</p>
+                    <img style="max-width: 30%; max-height: 30%; padding-top: 15px; padding-bottom: 30px;"
+                      src="../project4_images/tree1.png">
+                    <p>In the same way, we measured their <code>thickness</code>.</p>
+                    <img style="max-width: 45%; max-height: 30%; padding-top: 15px; padding-bottom: 30px;"
+                      src="../project4_images/Thickness.png">
+                    <p style="max-width: 80%;">Here I have all <span style="color:green">green</span> 
+                      on the left side, but the right side is about <code>50/50</code> 
+                      <span style="color:green">green</span>/<span style="color:blue">blue</span>.</p>
+                    <p>Then, we measured <code>weight</code>.</p>
+                    <img style="max-width: 45%; max-height: 30%; padding-top: 15px; padding-bottom: 30px;"
+                      src="../project4_images/weight.png">
+                    <p style="max-width: 80%;">The <strong>weight</strong> feature seems very promising.</p>
+                    <p style="max-width: 80%;">It is not perfect, but the left side is about <code>92%</code> 
+                      <span style="color:blue">blue</span>, and the right side is about <code>92%</code> 
+                      <span style="color:green">green</span>.</p>
+                    <p>Finally, we decided to add a new feature: <strong>Electrical Resistance</strong>.</p>
+                    <img style="max-width: 60%; max-height: 60%; padding-top: 15px; padding-bottom: 30px;"
+                      src="../project4_images/er.png">
+                    <p>The <strong>Electrical Resistance</strong> seems also promising.</p>
+                    <P style="padding-bottom: 30px;">Again, it is not perfect, but the left side is about <code>89%</code> <span style="color:blue">blue</span>, 
+                    and the right side is about <code>89%</code> <span style="color:green">green</span>.</P>
+                    <li><strong>Combining Selection Features</strong></li>
                   </ul>
                 </div>
               </div>
@@ -782,7 +822,7 @@
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
                 aria-controls="panelsStayOpen-collapseThree">
-                Machine Learning Project Part 3 (Combining)
+                Machine Learning Project Part 3 (Combining Part 1 and Part 2)
               </button>
             </h2>
             <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
