@@ -748,24 +748,67 @@
                     <p>In the same way, we measured their <code>thickness</code>.</p>
                     <img style="max-width: 45%; max-height: 30%; padding-top: 15px; padding-bottom: 30px;"
                       src="../project4_images/Thickness.png">
-                    <p style="max-width: 80%;">Here I have all <span style="color:green">green</span> 
-                      on the left side, but the right side is about <code>50/50</code> 
-                      <span style="color:green">green</span>/<span style="color:blue">blue</span>.</p>
+                    <p style="max-width: 80%;">Here I have all <span style="color:green">green</span>
+                      on the left side, but the right side is about <code>50/50</code>
+                      <span style="color:green">green</span>/<span style="color:blue">blue</span>.
+                    </p>
                     <p>Then, we measured <code>weight</code>.</p>
                     <img style="max-width: 45%; max-height: 30%; padding-top: 15px; padding-bottom: 30px;"
                       src="../project4_images/weight.png">
                     <p style="max-width: 80%;">The <strong>weight</strong> feature seems very promising.</p>
-                    <p style="max-width: 80%;">It is not perfect, but the left side is about <code>92%</code> 
-                      <span style="color:blue">blue</span>, and the right side is about <code>92%</code> 
-                      <span style="color:green">green</span>.</p>
+                    <p style="max-width: 80%;">It is not perfect, but the left side is about <code>92%</code>
+                      <span style="color:blue">blue</span>, and the right side is about <code>92%</code>
+                      <span style="color:green">green</span>.
+                    </p>
                     <p>Finally, we decided to add a new feature: <strong>Electrical Resistance</strong>.</p>
                     <img style="max-width: 60%; max-height: 60%; padding-top: 15px; padding-bottom: 30px;"
                       src="../project4_images/er.png">
                     <p>The <strong>Electrical Resistance</strong> seems also promising.</p>
-                    <P style="padding-bottom: 30px;">Again, it is not perfect, but the left side is about <code>89%</code> <span style="color:blue">blue</span>, 
-                    and the right side is about <code>89%</code> <span style="color:green">green</span>.</P>
+                    <P style="padding-bottom: 30px;">Again, it is not perfect, but the left side is about
+                      <code>89%</code> <span style="color:blue">blue</span>,
+                      and the right side is about <code>89%</code> <span style="color:green">green</span>.
+                    </P>
                     <li><strong>Combining Selection Features</strong></li>
+                    <p style="padding-top: 15px;">If we only consider <code>pairs of features</code>, we have:</p>
+                    <ul>
+                      <li><i>[Diameter, Thickness]</i></li>
+                      <img style="max-width: 60%; max-height: 60%; padding-top: 15px; padding-bottom: 30px;"
+                        src="../project4_images/D&T.png">
+                      <li><i>[Diameter, Weight]</i></li>
+                      <img style="max-width: 60%; max-height: 60%; padding-top: 15px; padding-bottom: 30px;"
+                        src="../project4_images/D&W.png">
+                      <li><i>[Diameter, Electrical Resistance]</i></li>
+                      <li><i>[Thickness, Weight]</i></li>
+                      <li><i>[Thickness, Electrical Resistance]</i></li>
+                      <li><i>[Weight, Electrical Resistance]</i></li>
+                    </ul>
+                    <p style="padding-top: 16px;">For brevity, some combinations are omitted.</p>
+                    <p>Let us jump to the <code>last combination</code>...</p>
+                    <img style="max-width: 60%; max-height: 60%; padding-top: 15px; padding-bottom: 30px;"
+                      src="../project4_images/last.png">
+                    <p>We can also try all possible triples of features.</p>
+                    <ul>
+                      <li><i>[Diameter, Thickness, Weight]</i></li>
+                      <img style="max-width: 60%; max-height: 60%; padding-top: 15px; padding-bottom: 30px;"
+                        src="../project4_images/D&T&W.png">
+                      <p>This combination doesn't work that well.</p>
+                      <li><i>[Diameter, Thickness, Electrical Resistence]</i></li>
+                      <img style="max-width: 60%; max-height: 60%; padding-top: 15px; padding-bottom: 30px;"
+                        src="../project4_images/all.png">
+                    </ul>
+                    <li><strong>Greedy Forward Selection</strong></li>
+                    <p style="padding-top: 15px;">Notice that it is not true that the more features you combine, the more accurate it will be.</p>
+                    <img style="max-width: 60%; max-height: 60%; padding-top: 15px; padding-bottom: 30px;"
+                        src="../project4_images/final.png">
+                    <p>From this result, we can now report two things:</p>
+                    <ol>
+                      <li>For this problem, features '<i>3</i>' and '<i>4</i>' are the best.</li>
+                      <li>When we depoly this model, the accuracy is about <code>98%</code>.</li>
+                    </ol>
+                    <li style="padding-top: 16px;"><strong>Implementing Project Part 1</strong></li>
                   </ul>
+
+                  
                 </div>
               </div>
             </div>
