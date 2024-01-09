@@ -864,6 +864,9 @@
                       <p style="color:brown">We got the accuracy under selected features.</p>
                     </ol>
                     <li><strong>Inplementing Nearest Neighbor Classifier</strong></li>
+                    <p style="padding-top: 15px;">
+                      <code><strong>The goal of this implementation is to find the highest accuracy under selected features.</strong></code>
+                    </p>
                     <p style="padding-top: 15px;">We are given <code>txt files</code> like as the following:</p>
                     <img style="max-width: 96%; max-height: 60%; padding-top: 15px; padding-bottom: 30px;"
                       src="../project4_images/txt.png">
@@ -874,7 +877,7 @@
                     <p style="padding-top: 40px; color:brown">A snippet of code:</p>
                     <img style="max-width: 70%; max-height: 60%; padding-top: 15px; padding-bottom: 30px;"
                       src="../project4_images/code.png">
-                    <p style="padding-top: 40px; color:brown">A snippet of output:</p>
+                    <p style="color:brown">A snippet of output:</p>
                     <img style="max-width: 60%; max-height: 60%; padding-top: 15px; padding-bottom: 30px;"
                       src="../project4_images/output.png">
                   </ul>
@@ -897,31 +900,63 @@
               <div class="accordion-body">
                 <!-- Put technology stack rationale right here -->
                 <div>
-                  <p><strong>Heuristic Search</strong> is a Informed Search.</p>
-                  <p>A Heuristic is a function that, when applied to a state, returns a number that is an estimate of
-                    the merit of the state, with respect to the goal.</p>
-                  <p>In other words, the heuristic tells us approximately how far the state is from the
-                    <code>goal state</code>.
+                  <p style="max-width: 80%;">Remember in <code>Part 1</code> we are asked to use random accuracy numbers
+                    to find the best feature selection.</p>
+                  <p style="max-width: 80%">And in <code>Part 2</code>, we implemented how to find the highest accuracy
+                    under selected features.</p>
+                  <p style="max-width: 80%"><strong>Now it's time to combine Part 1 and Part 2 to find
+                      <code>the best feature selection</code>.</strong></p>
+                  <p style="max-width: 80%">There are two methods of this project, <code>Forward Selection</code> and
+                    <code>Backward Elimination</code>
                   </p>
-                  <img style="max-width: 30%; max-height: 50%; padding-top: 20px; padding-bottom: 20px;"
-                    src="../project3_images/goal_state.png">
-                  <p>In this case, only <strong>'8'</strong> is misplaced, so the heuristic function evaluates to 1.</p>
-                  <p style="color:chocolate">In other words, the heuristic is telling us, that it thinks a solution
-                    might be available in just 1 more move.</p>
-                  <img style="max-width: 70%; max-height: 50%; padding-top: 20px; padding-bottom: 20px;"
-                    src="../project3_images/manhattan.png">
-                  <p style="color:chocolate">Through Heuristic Search, we can effectively prune the Blind Search Tree.
-                  </p>
-                  <img style="max-width: 70%; max-height: 50%; padding-top: 20px; padding-bottom: 20px;"
-                    src="../project3_images/jian.png">
-                  <ul>
-                    <li><strong>My Code of Finding h(n)</strong></li>
-                    <img style="max-width: 60%; max-height: 50%; padding-top: 20px; padding-bottom: 20px;"
-                      src="../project3_images/code.png">
-                    <li><strong>A Sample Console Output</strong></li>
-                    <img style="max-width: 60%; max-height: 50%; padding-top: 20px; padding-bottom: 20px;"
-                      src="../project3_images/output.png">
-                  </ul>
+                  <ol>
+                    <strong>
+                      <li>Forward Selection</li>
+                    </strong>
+                    <p style="padding-top: 15px;">We are going to use <code>Greedy Search</code> in this selection
+                      algorithm,
+                      that means we start from empty set</p>
+                    <p style="color:brown">try adding feature 1, find the accuracy</p>
+                    <p style="color:brown">try adding feature 2, find the accuracy</p>
+                    <p style="color:brown">try adding feature 3, find the accuracy</p>
+                    <p style="color:brown">......</p>
+                    <p>Find the highest accuracy feature, add this node to the root.</p>
+                    <p>Snippet of output, and the search tree:</p>
+                    <img style="max-width: 70%; max-height: 60%; padding-top: 15px; padding-bottom: 30px;"
+                      src="../project4_images/last1.png">
+                    <p><code>The current selected feature: [9], then try to add other features except feature 9</code>
+                    </p>
+                    <img style="max-width: 70%; max-height: 60%; padding-top: 15px; padding-bottom: 30px;"
+                      src="../project4_images/last2.png">
+                    <p><code>Keep adding, until all the features are added.</code></p>
+                    <img style="max-width: 70%; max-height: 60%; padding-top: 15px; padding-bottom: 30px;"
+                      src="../project4_images/last3.png">
+                    <p>This result means that for the <code>Forward Selection</code>, use the
+                      <code>combination of features[9, 1, 5, 8]</code>,
+                      we will get the <code>best result</code> to distinguish 2 items.
+                    </p>
+                    <strong>
+                      <li>Backward Elimination</li>
+                    </strong>
+                    <p style="padding-top: 15px;">The Backward Elimination is <code>opposite</code> to the Forward
+                      Selection.</p>
+                    <p>That means it starts from all the features have been selected.</p>
+                    <p>Then, try to <code>remove a feature</code>, find the best features combination.</p>
+                    <img style="max-width: 80%; max-height: 60%; padding-top: 15px; padding-bottom: 30px;"
+                      src="../project4_images/back1.png">
+                    <p>Then, try to <code>remove another feature</code>, find the best features combination.</p>
+                    <img style="max-width: 80%; max-height: 60%; padding-top: 15px; padding-bottom: 30px;"
+                      src="../project4_images/back2.png">
+                    <p><code>Keep removing, until the last feature.</code></p>
+                    <img style="max-width: 60%; max-height: 60%; padding-top: 15px; padding-bottom: 30px;"
+                      src="../project4_images/back3.png">
+                    <p>This result means that for the <code>Backward Elimination</code>, use the
+                      <code>combination of feature[6]</code>,
+                      we will get the <code>best result</code> to distinguish 2 items.
+                    </p>
+                    <p><strong>Notice that the best combinations of Forward Selection and Backward Elimination.</strong></p>
+                    <p><code><strong>Therefore, comparing two results we should choose the Forward Selection features[9, 1, 5, 8] as our final result.</strong></code></p>
+                  </ol>
                 </div>
               </div>
             </div>
