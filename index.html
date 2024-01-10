@@ -9,10 +9,17 @@
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <style>
     p {
-      max-width: 1000px;
-      /* 设置最大宽度 */
-      word-wrap: break-word;
-      /* 在单词内部换行 */
+      padding-left: 50px;
+      padding-top: 20px;
+    }
+
+    img {
+      padding-left: 50px;
+      padding-top: 20px;
+    }
+
+    .hidden-tab {
+      display: none;
     }
   </style>
 </head>
@@ -113,23 +120,80 @@
 
 
         <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
-          <p>I graduated from UC Riverside last December with a Bachelor of Science degree in Computer Science, achieving a GPA of 3.79.</p>
-          <img style="max-width: 60%; max-height: 60%; padding-top: 15px; padding-bottom: 30px;"
+          <p><strong>I graduated from UC Riverside last December with a Bachelor of Science degree in Computer Science,
+              achieving a GPA of 3.79.</strong></p>
+          <img style="max-width: 70%; max-height: 60%; padding-top: 15px; padding-bottom: 30px;"
             src="./project4_images/gpa.png">
-          <p style="color:chocolate">I am an active coder.</p>
-          <img style="max-width: 60%; max-height: 60%; padding-top: 15px; padding-bottom: 30px;"
+          <p style="color:red"><strong>I am an active coder.</strong></p>
+          <img style="max-width: 70%; max-height: 60%; padding-top: 15px; padding-bottom: 30px;"
             src="./project4_images/git.png">
+          <p><strong>Before July last year, I was still coding, but the code was mainly saved on my local
+              computer.</strong></p>
         </div>
 
-        <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+        <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
           <div class="container-fluid py-3">
-            <h2 class="display-7 fw-bold">My Projects</h2>
-            <p class="col-md-11 fs-5">I'd like to briefly introduce four major projects I've done. The first one is my
-              graduation project, a ship management software. The second one is a website for a restaurant online
-              ordering
-              system, and the last two are 8-puzzle problems related to Artificial Intelligence, as well as a Feature
-              Selection project related to Machine Learning.</p>
-            <a href="./public/projects.html" class="btn btn-primary btn-md" role="button">More details</a>
+            <h2 class="display-7 fw-bold" style="padding-bottom: 15px;">My Projects</h2>
+
+
+            <div class="row">
+              <div class="col-sm-6 mb-3 mb-sm-0">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Ship Management System</h5>
+                    <p class="card-text" style="padding-left: 0px; padding-bottom: 0px;">This is my graduation project,
+                      a software written 100% in <i>Python GUI</i>.</p>
+                    <img style="max-width: 60%; max-height: 60%; padding-top: 0px; padding-bottom: 10px;"
+                      src="./project3_images/l1.png">
+                    <p></p>
+                    <a href="./public/projects.html" class="btn btn-primary btn-sm" role="button">More details</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Restaurant Online Ordering Website</h5>
+                    <p class="card-text" style="padding-left: 0px; padding-bottom: 0px;">An online ordering website
+                      written mainly in <i>JavaScript</i>.</p>
+                    <img style="max-width: 60%; max-height: 60%; padding-top: 0px; padding-bottom: 10px;"
+                      src="./project3_images/l2.png">
+                    <p></p>
+                    <a href="./public/projects.html#profile-tab" class="btn btn-primary btn-sm"
+                      onclick="showTab('profile-tab')">More details</a>
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 mb-3 mb-sm-0" style="padding-top: 15px;">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Solving N-Puzzle Problems</h5>
+                    <p class="card-text" style="padding-left: 0px; padding-bottom: 20px;">An algorithm for solving
+                      n-puzzles related to artificial intelligence written 100% in <i>Java</i>.</p>
+                    <img style="max-width: 60%; max-height: 60%; padding-top: 0px; padding-bottom: 10px;"
+                      src="./project3_images/l3.png">
+                    <p></p>
+                    <a href="./public/projects.html#contact-tab" class="btn btn-primary btn-sm"
+                      onclick="showTab('contact-tab')">More details</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6" style="padding-top: 15px;">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Maching Learning Projects</h5>
+                    <p class="card-text" style="padding-left: 0px; padding-bottom: 20px;">An algorithm written 100% in
+                      <i>Java</i> to find the best features combination that distinguishes two items.</p>
+                    <img style="max-width: 60%; max-height: 60%; padding-top: 0px; padding-bottom: 10px;"
+                      src="./project3_images/l3.png">
+                    <p></p>
+                    <a href="./public/projects.html#disabled-tab" class="btn btn-primary btn-sm"
+                      onclick="showTab('disabled-tab')">More details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -137,19 +201,33 @@
         <div class="row align-items-md-stretch">
           <div class="col-md-6">
             <div class="h-100 p-5 text-bg-dark rounded-3">
-              <h2>Change the background</h2>
-              <p>Swap the background-color utility and add a `.text-*` color utility to mix up the jumbotron look. Then,
-                mix and match with additional component themes and more.</p>
-              <button class="btn btn-outline-light" type="button">Example button</button>
+              <h2>About Me</h2>
+              <p style="padding-left: 0px;">I enjoy gaming.</p>
+              <p style="padding-left: 0px; padding-top: 0px;">I love watching movies with my family.</p>
+              <p style="padding-left: 0px; padding-top: 0px;">I like novels.</p>
+              <p style="padding-left: 0px;">Click 'My Top 3s' button to learn about my top 3 video games, movies, and
+                novels
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-emoji-smile" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                  <path
+                    d="M4.285 9.567a.5.5 0 0 1 .683.183A3.5 3.5 0 0 0 8 11.5a3.5 3.5 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5m4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5" />
+                </svg>
+              </p>
+
+              <button class="btn btn-outline-light" type="button">My Top 3s</button>
             </div>
           </div>
           <div class="col-md-6">
             <div class="h-100 p-5 bg-body-tertiary border rounded-3">
-              <h2>Add borders</h2>
-              <p>Or, keep it light and add a border for some added definition to the boundaries of your content. Be sure
-                to look under the hood at the source HTML here as we've adjusted the alignment and sizing of both
-                column's content for equal-height.</p>
-              <button class="btn btn-outline-secondary" type="button">Example button</button>
+              <h2>Contact Me</h2>
+              <p style="padding-left: 0px;"><strong>Tel:</strong> (626)378-7503</p>
+              <p style="padding-left: 0px;"><strong>Email:</strong> tchen285@ucr.edu</p>
+              <p style="padding-left: 0px; padding-bottom: 0px;"><strong>Address:</strong></p>
+              <p style="padding-left: 0px; padding-top: 0px;">
+                1850 Batson Ave Apt 25,<br />
+                Rowland Heights, CA 91748 <br />
+              </p>
             </div>
           </div>
         </div>
@@ -159,6 +237,8 @@
         </footer>
       </div>
     </main>
+
+
     <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"></script>
