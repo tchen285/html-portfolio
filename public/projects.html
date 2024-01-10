@@ -954,8 +954,12 @@
                       <code>combination of feature[6]</code>,
                       we will get the <code>best result</code> to distinguish 2 items.
                     </p>
-                    <p><strong>Notice that the best combinations of Forward Selection and Backward Elimination.</strong></p>
-                    <p><code><strong>Therefore, comparing two results we should choose the Forward Selection features[9, 1, 5, 8] as our final result.</strong></code></p>
+                    <p>
+                      <code><strong>Notice that the best combinations of Forward Selection and Backward Elimination.</strong></code>
+                    </p>
+                    <p>
+                      <code><strong>Therefore, comparing two results we should choose the Forward Selection features[9, 1, 5, 8] as our final result.</strong></code>
+                    </p>
                   </ol>
                 </div>
               </div>
@@ -977,6 +981,18 @@
   <script>
     function goBack() {
       window.history.back();
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var hash = window.location.hash.substr(1);
+      if (hash) {
+        showTab(hash);
+      }
+    });
+
+    function showTab(tabId) {
+      var tab = new bootstrap.Tab(document.querySelector(`#${tabId}`));
+      tab.show();
     }
   </script>
   </div>
