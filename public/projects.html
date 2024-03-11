@@ -1069,17 +1069,25 @@
                 <p>They will then see a page that requires them to enter the <code>URL</code>, <code>target price</code>, and their <code>email address</code>.</p>
                 <img style="max-width: 70%; max-height: 50%; padding-top: 20px; padding-bottom: 20px;"
                   src="../price_tracker_images/track2.jpg">
-                <p>To achieve this, I used selenium to scraping websites.</p>>
+                <p>To achieve this, I use selenium to scraping websites.</p>
                 <img style="max-width: 70%; max-height: 50%; padding-top: 20px; padding-bottom: 20px;"
-                  src="../project3_images/jian.png">
-                <ul>
-                  <li><strong>My Code of Finding h(n)</strong></li>
-                  <img style="max-width: 60%; max-height: 50%; padding-top: 20px; padding-bottom: 20px;"
-                    src="../project3_images/code.png">
-                  <li><strong>A Sample Console Output</strong></li>
-                  <img style="max-width: 60%; max-height: 50%; padding-top: 20px; padding-bottom: 20px;"
-                    src="../project3_images/output.png">
-                </ul>
+                  src="../price_tracker_images/selenium1.jpg">
+                <p style="max-width: 70%;">There are 3 classes: <code>BestBuyScraper</code>, <code>SteamScraper</code>, and <code>AmazonScraper</code>, are defined in <strong>bestbuy.py</strong>, <strong>steam.py</strong>, and <strong>amazon.py</strong> respectively.</p>
+                <p>After users enter the url, the url will be passed in the scraper class.</p>
+                <img style="max-width: 70%; max-height: 50%; padding-top: 20px; padding-bottom: 20px;"
+                  src="../price_tracker_images/class1.jpg">
+                <p>Selenium driver opens the url and grabs the product name and current price and returns them.</p>
+                <img style="max-width: 80%; max-height: 50%; padding-top: 20px; padding-bottom: 20px;"
+                  src="../price_tracker_images/class2.jpg">
+                <p>Then the product name and current price, along with user's target price and email will be passed into the HTML file through Jinja.</p>
+                <img style="max-width: 90%; max-height: 50%; padding-top: 20px; padding-bottom: 20px;"
+                  src="../price_tracker_images/jinja1.jpg">
+                <p>So that the data can be showed up on website.</p>
+                <img style="max-width: 80%; max-height: 50%; padding-top: 20px; padding-bottom: 20px;"
+                  src="../price_tracker_images/display1.jpg">
+                <p>At the same time, the data will be added to <code>data.csv</code>.</p>
+                <img style="max-width: 80%; max-height: 50%; padding-top: 20px; padding-bottom: 20px;"
+                  src="../price_tracker_images/data1.jpg">
               </div>
             </div>
           </div>
